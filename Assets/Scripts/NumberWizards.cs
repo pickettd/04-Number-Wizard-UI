@@ -30,6 +30,7 @@ public class NumberWizards : MonoBehaviour {
 	}
 
 	public void GuessCorrect(){
+		LevelManager.LoadScene("Win Screen");
 		StartGame ();
 	}
 	
