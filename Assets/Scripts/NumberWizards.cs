@@ -36,7 +36,12 @@ public class NumberWizards : MonoBehaviour {
 	
 	void NextGuess () {
 		//guess = (max + min) / 2;
-		guess = Random.Range(min, max);
+		if (max < 5) {
+			guess = -1;
+		}
+		else {
+			guess = Random.Range(min, max);
+		}
 		print ("Next guess is " + guess);
 		guessText.text = guess.ToString();
 	}
